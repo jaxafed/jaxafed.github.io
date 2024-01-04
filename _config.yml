@@ -16,7 +16,7 @@ timezone: Europe/Istanbul
 
 title: jaxafed # the main title
 
-tagline: Hello! # it will display as the sub-title
+tagline:  # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Simple blog for sharing writeups and such
