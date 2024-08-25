@@ -2,7 +2,7 @@
 title: "TryHackMe: U.A. High School"
 author: jaxafed
 categories: [TryHackMe]
-tags: [web, ffuf, fuzz, php, steganography, sudo, command injection]
+tags: [web, ffuf, fuzz, php, steganography, sudo, arbitrary file write]
 render_with_liquid: false
 img_path: /images/tryhackme_ua_high_school/
 image:
@@ -220,7 +220,7 @@ $ xxd oneforall.jpg | head
 00000090: 2828 2828 2828 2828 2828 2828 2828 ffc0  ((((((((((((((..
 ```
 
-Well, the `steghide` does not support `PNG` files, and the file already has the `JPG` extension. We can try changing the `PHP` magic bytes (`89 50 4E 47 0D 0A 1A 0A`) to `JPG` magic bytes (`FF D8 FF E0 00 10 4A 46 49 46 00 01`).
+Well, the `steghide` does not support `PNG` files, and the file already has the `JPG` extension. We can try changing the `PNG` magic bytes (`89 50 4E 47 0D 0A 1A 0A`) to `JPG` magic bytes (`FF D8 FF E0 00 10 4A 46 49 46 00 01`).
 
 Using `hexeditor` for this.
 
