@@ -11,7 +11,7 @@ image:
 
 CERTain Doom began by discovering an arbitrary file upload vulnerability and combining it with `CVE-2020-9484` to gain a shell within a container, which led to obtaining the first flag. 
 
-Using the container to scan for internal hosts, we identified two hosts and an internal service with one running the front-end and one running the-backend for it. The service manages documents and by logging into it with predictable credentials, we found a chat log and downloading it, discovered the second flag.
+Using the container to scan for internal hosts, we identified two hosts and an internal service with one running the front-end and one running the back-end for it. The service manages documents and by logging into it with predictable credentials, we found a chat log and downloading it, discovered the second flag.
 
 After that, using the `psychic signatures` vulnerability to forge a `JWT` for another user, we discovered a hidden file belonging to the user and downloading it, we obtained the third flag.
 
