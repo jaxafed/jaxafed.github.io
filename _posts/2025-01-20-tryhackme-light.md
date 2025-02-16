@@ -5,7 +5,7 @@ categories: [TryHackMe]
 date: 2025-01-20 00:00:01 +0000
 tags: [sql, sql injection, sqlite]
 render_with_liquid: false
-img_path: /images/tryhackme_light/
+media_subpath: /images/tryhackme_light/
 image:
   path: room_image.webp
 ---

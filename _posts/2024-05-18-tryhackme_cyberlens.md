@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, windows, rce, command injection, privilege esclation]
 render_with_liquid: false
-img_path: /images/tryhackme_cyberlens/
+media_subpath: /images/tryhackme_cyberlens/
 image:
   path: room_image.webp
 ---

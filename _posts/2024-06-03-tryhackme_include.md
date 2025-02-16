@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, api, prototype pollution, ssrf, lfi, log poisoning]
 render_with_liquid: false
-img_path: /images/tryhackme_include/
+media_subpath: /images/tryhackme_include/
 image:
   path: room_image.webp
 ---

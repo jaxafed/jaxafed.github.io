@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, ffuf, python, rate-limit, brute-force, authentication bypass, jwt, remote code execution]
 render_with_liquid: false
-img_path: /images/tryhackme_hammer/
+media_subpath: /images/tryhackme_hammer/
 image:
   path: room_image.webp
 ---

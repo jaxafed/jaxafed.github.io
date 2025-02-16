@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, fuzz, vhost, ffuf, hydra, brute-force, cron, sstv, steganography]
 render_with_liquid: false
-img_path: /images/tryhackme_nanocherryctf/
+media_subpath: /images/tryhackme_nanocherryctf/
 image:
   path: room_image.webp
 ---

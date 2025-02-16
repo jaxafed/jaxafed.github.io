@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, fuzzing, weak credentials, concrete5, cms, rce, suid, cron, hosts]
 render_with_liquid: false
-img_path: /images/tryhackme_mkingdom/
+media_subpath: /images/tryhackme_mkingdom/
 image:
   path: room_image.webp
 ---

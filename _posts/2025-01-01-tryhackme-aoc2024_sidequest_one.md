@@ -5,7 +5,7 @@ categories: [TryHackMe]
 date: 2025-01-01 00:00:01 +0000
 tags: [web, flask, pcap, wireshark, tshark, reverse engineering, ghidra, python]
 render_with_liquid: false
-img_path: /images/tryhackme_aoc2024_sidequest_one/
+media_subpath: /images/tryhackme_aoc2024_sidequest_one/
 image:
   path: room_image.webp
 ---

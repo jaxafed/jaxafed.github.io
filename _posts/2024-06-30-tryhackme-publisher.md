@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, fuzz, ffuf, php, rce, suid, apparmor]
 render_with_liquid: false
-img_path: /images/tryhackme_publisher/
+media_subpath: /images/tryhackme_publisher/
 image:
   path: room_image.webp
 ---

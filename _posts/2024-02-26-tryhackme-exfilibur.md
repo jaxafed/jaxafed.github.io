@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, cve, file disclosure, xxe, firewall, rce, windows, privilege]
 render_with_liquid: false
-img_path: /images/tryhackme_exfilibur/
+media_subpath: /images/tryhackme_exfilibur/
 image:
   path: room_image.webp
 ---

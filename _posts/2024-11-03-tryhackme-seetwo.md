@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [pcap, wireshark, http, tcp, c2, python, xor, base64]
 render_with_liquid: false
-img_path: /images/tryhackme_seetwo/
+media_subpath: /images/tryhackme_seetwo/
 image:
   path: room_image.webp
 ---

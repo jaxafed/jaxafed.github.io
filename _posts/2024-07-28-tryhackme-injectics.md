@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, javascript, sql injection, ssti, rce]
 render_with_liquid: false
-img_path: /images/tryhackme_injectics/
+media_subpath: /images/tryhackme_injectics/
 image:
   path: room_image.webp
 ---

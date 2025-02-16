@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, ffuf, fuzz, php, steganography, sudo, arbitrary file write]
 render_with_liquid: false
-img_path: /images/tryhackme_ua_high_school/
+media_subpath: /images/tryhackme_ua_high_school/
 image:
   path: room_image.webp
 ---

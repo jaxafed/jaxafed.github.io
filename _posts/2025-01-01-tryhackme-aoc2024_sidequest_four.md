@@ -5,7 +5,7 @@ categories: [TryHackMe]
 date: 2025-01-01 00:00:04 +0000
 tags: [web, sqli, smb, brute-forcing, phishing, bloodhound, active directory, shadow credentials, iis]
 render_with_liquid: false
-img_path: /images/tryhackme_aoc2024_sidequest_four/
+media_subpath: /images/tryhackme_aoc2024_sidequest_four/
 image:
   path: room_image.webp
 ---

@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, xss, js]
 render_with_liquid: false
-img_path: /images/tryhackme_the_sticker_shop/
+media_subpath: /images/tryhackme_the_sticker_shop/
 image:
   path: room_image.webp
 ---

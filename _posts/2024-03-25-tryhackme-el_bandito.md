@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, request smuggling, websocket, proxy]
 render_with_liquid: false
-img_path: /images/tryhackme_el_bandito/
+media_subpath: /images/tryhackme_el_bandito/
 image:
   path: room_image.webp
 ---

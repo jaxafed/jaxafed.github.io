@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, wordpress, wpscan, file disclosure, rce, backdoor, php, mysql, john, hash, pam, zip]
 render_with_liquid: false
-img_path: /images/tryhackme_smol/
+media_subpath: /images/tryhackme_smol/
 image:
   path: room_image.webp
 ---

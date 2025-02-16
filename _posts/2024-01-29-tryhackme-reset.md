@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [smb, ntlm_theft, bloodhound, windows, active directory, domain, constrained delegation]
 render_with_liquid: false
-img_path: /images/tryhackme_reset/
+media_subpath: /images/tryhackme_reset/
 image:
   path: room_image.webp
 ---

@@ -5,7 +5,7 @@ categories: [TryHackMe]
 tags: [nc, xor, python]
 render_with_liquid: false
 math: true
-img_path: /images/tryhackme_w1seguy/
+media_subpath: /images/tryhackme_w1seguy/
 image:
   path: room_image.webp
 ---

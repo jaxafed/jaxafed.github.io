@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, node, docker, mysql, rce]
 render_with_liquid: false
-img_path: /images/tryhackme_umbrella/
+media_subpath: /images/tryhackme_umbrella/
 image:
   path: room_image.webp
 ---

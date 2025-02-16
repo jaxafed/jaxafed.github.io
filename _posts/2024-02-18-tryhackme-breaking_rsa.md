@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, rsa, cryptography, python, ssh]
 render_with_liquid: false
-img_path: /images/tryhackme_breaking_rsa/
+media_subpath: /images/tryhackme_breaking_rsa/
 image:
   path: room_image.webp
 ---

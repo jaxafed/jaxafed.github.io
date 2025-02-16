@@ -5,7 +5,7 @@ categories: [TryHackMe]
 date: 2025-01-01 00:00:03 +0000
 tags: [web, idor, fuzz, pwn, heap, docker, kernel]
 render_with_liquid: false
-img_path: /images/tryhackme_aoc2024_sidequest_three/
+media_subpath: /images/tryhackme_aoc2024_sidequest_three/
 image:
   path: room_image.webp
 ---

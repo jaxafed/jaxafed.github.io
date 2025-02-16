@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, windows, active directory, ffuf, vhost, xss, sqli, ssh, adm, log, netexec, kerbrute, winrm, brute-force, secretsdump, bloodhound, responder, rbcd]
 render_with_liquid: false
-img_path: /images/tryhackme_k2/
+media_subpath: /images/tryhackme_k2/
 image:
   path: room_image.webp
 ---

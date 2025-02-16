@@ -4,7 +4,7 @@ author: jaxafed
 categories: [TryHackMe]
 tags: [web, ffuf, fuzz, wordpress, brute-force, chisel, command injection, race condition, sudo, python, jail]
 render_with_liquid: false
-img_path: /images/tryhackme_breakme/
+media_subpath: /images/tryhackme_breakme/
 image:
   path: room_image.webp
 ---
