@@ -9,7 +9,7 @@ image:
   path: room_image.webp
 ---
 
-**Rubberstamp** started by discovering an endpoint that enabled us to leak the ViewState validation and decryption keys in an IIS application, which allowed us to exploit a **ViewState deserialization vulnerability** to achieve **remote code execution (RCE)** and obtain a foothold. We then enumerated Active Directory certificate templates, discovered one vulnerable to **ESC1**, and abused it to authenticate as Administrator and obtain the root flag, completing the room.
+**Rubber Stamp** started by discovering an endpoint that enabled us to leak the ViewState validation and decryption keys in an IIS application, which allowed us to exploit a **ViewState deserialization vulnerability** to achieve **remote code execution (RCE)** and obtain a foothold. We then enumerated Active Directory certificate templates, discovered one vulnerable to **ESC1**, and abused it to authenticate as Administrator and obtain the root flag, completing the room.
 
 [![](room_card.webp){: width="300" height="300" .shadow}](https://tryhackme.com/room/rubberstamp){: .center }
 
